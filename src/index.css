@@ -1,0 +1,12 @@
+body {
+  font-family: "Lato", sans-serif !important;
+}
+
+.modal-content,
+#navbar,
+header,
+#products-main {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}

@@ -56,7 +56,7 @@ function updateFilter(e) {
             .map((product, index) => {
                 return (
                 <Col xs={6} md={3} key={index} className='mb-4'>
-                    <ProductCard {...product}/>
+                    <ProductCard product={product}/>
                 </Col>
                 );
             })}
