@@ -28,7 +28,7 @@ return (
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="/cart">Cart <i className="fa-solid fa-cart-shopping"></i></Nav.Link>
+            <Nav.Link href="/cart" aria-label="cart"><i className="fa-solid fa-cart-shopping"></i></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
