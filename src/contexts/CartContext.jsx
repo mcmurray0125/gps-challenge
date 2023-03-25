@@ -12,36 +12,41 @@ export function CartProvider({ children }) {
         return storedCart ? JSON.parse(storedCart) : []
     })
   
-    function removeProduct(id) {
+    function removeProduct(product) {
         let updatedCart = [...cart];
-        let productIndex = updatedCart.findIndex(product => product.id === id);
+        let cartItemIndex = updatedCart.findIndex(cartItem => cartItem.id === product.id);
 
-        if (productIndex !== -1) {
-            const productQuantity = updatedCart[productIndex].quantity;
-            if (productQuantity === 1) {
-                updatedCart.splice(productIndex, 1);
+        if (cartItemIndex !== -1) {
+            const itemQuantity = updatedCart[cartItemIndex].quantity;
+            if (itemQuantity === 1) {
+                updatedCart.splice(cartItemIndex, 1);
             } else {
-                updatedCart[productIndex].quantity = productQuantity - 1;
+                updatedCart[cartItemIndex].quantity = itemQuantity - 1;
             }
             setCart(updatedCart);
             localStorage.setItem('cart', JSON.stringify(updatedCart));
         }
     }
     
-    function addProduct(id, price) {
+    function addProduct(product) {
         let updatedCart = [...cart];
     
         // check if the product already exists in the cart
-        let productIndex = updatedCart.findIndex(product => product.id === id);
+        let cartItemIndex = updatedCart.findIndex(cartItem => cartItem.id === product.id);
     
-        if (productIndex !== -1) {
-            updatedCart[productIndex].quantity += 1;
+        if (cartItemIndex !== -1) {
+            updatedCart[cartItemIndex].quantity += 1;
         } else {
-            updatedCart.push({ id, price, quantity: 1 });
+            updatedCart.push({ ...product, quantity: 1 });
         }
     
         setCart(updatedCart);
         localStorage.setItem('cart', JSON.stringify(updatedCart));
+    }
+
+    function clearCart() {
+        setCart([])
+        localStorage.setItem('cart', JSON.stringify([]));
     }
 
     useEffect(() => {
@@ -52,7 +57,8 @@ export function CartProvider({ children }) {
     const value = { 
         cart,
         addProduct,
-        removeProduct
+        removeProduct,
+        clearCart
     }
 
     return (
