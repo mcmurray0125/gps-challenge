@@ -1,69 +1,82 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react';
 
-const CartContext = React.createContext()
+const CartContext = React.createContext();
 
 export function useCart() {
-    return useContext(CartContext)
+  return useContext(CartContext);
+}
+
+//Find the product to be changed
+function findCartItemIndex(cart, product) {
+  return cart.findIndex((cartItem) => cartItem.id === product.id);
+}
+
+//Updates product's quantity, removing if 0
+function updateCartItemQuantity(cart, product, quantityChange) {
+  const cartItemIndex = findCartItemIndex(cart, product);
+
+  if (cartItemIndex !== -1) {
+    const itemQuantity = cart[cartItemIndex].quantity;
+    if (itemQuantity === 1 && quantityChange === -1) {
+      cart.splice(cartItemIndex, 1);
+    } else {
+      cart[cartItemIndex].quantity = itemQuantity + quantityChange;
+    }
+  } else {
+    cart.push({ ...product, quantity: 1 });
+  }
+
+  return cart;
 }
 
 export function CartProvider({ children }) {
-    const [cart, setCart] = useState(() => {
-        const storedCart = localStorage.getItem('cart')
-        return storedCart ? JSON.parse(storedCart) : []
-    })
-  
-    function removeProduct(product) {
-        let updatedCart = [...cart];
-        let cartItemIndex = updatedCart.findIndex(cartItem => cartItem.id === product.id);
+  const [cart, setCart] = useState(() => {
+    const storedCart = localStorage.getItem('cart');
+    return storedCart ? JSON.parse(storedCart) : [];
+  });
 
-        if (cartItemIndex !== -1) {
-            const itemQuantity = updatedCart[cartItemIndex].quantity;
-            if (itemQuantity === 1) {
-                updatedCart.splice(cartItemIndex, 1);
-            } else {
-                updatedCart[cartItemIndex].quantity = itemQuantity - 1;
-            }
-            setCart(updatedCart);
-            localStorage.setItem('cart', JSON.stringify(updatedCart));
-        }
-    }
-    
-    function addProduct(product) {
-        let updatedCart = [...cart];
-    
-        // check if the product already exists in the cart
-        let cartItemIndex = updatedCart.findIndex(cartItem => cartItem.id === product.id);
-    
-        if (cartItemIndex !== -1) {
-            updatedCart[cartItemIndex].quantity += 1;
-        } else {
-            updatedCart.push({ ...product, quantity: 1 });
-        }
-    
-        setCart(updatedCart);
-        localStorage.setItem('cart', JSON.stringify(updatedCart));
-    }
+  function removeProduct(product) {
+    const updatedCart = [...cart];
+    const updatedCartItems = updateCartItemQuantity(updatedCart, product, -1);
 
-    function clearCart() {
-        setCart([])
-        localStorage.setItem('cart', JSON.stringify([]));
-    }
+    setCart(updatedCartItems);
+    localStorage.setItem('cart', JSON.stringify(updatedCartItems));
+  }
 
-    useEffect(() => {
-        console.log(cart)
-    },[cart])
+  function addProduct(product) {
+    const updatedCart = [...cart];
+    const updatedCartItems = updateCartItemQuantity(updatedCart, product, 1);
 
+    setCart(updatedCartItems);
+    localStorage.setItem('cart', JSON.stringify(updatedCartItems));
+  }
 
-    const value = { 
-        cart,
-        addProduct,
-        removeProduct,
-        clearCart
-    }
+  //Removes the product and all its quantity from cart.
+  function removeItem(product) {
+    let updatedCart = cart.filter(cartItem => cartItem.id !== product.id);
+    setCart(updatedCart);
+    localStorage.setItem('cart', JSON.stringify(updatedCart));
+}
 
-    return (
-        <CartContext.Provider value={value}>
-            {children}
-        </CartContext.Provider>
-    )
+  function clearCart() {
+    setCart([]);
+    localStorage.setItem('cart', JSON.stringify([]));
+  }
+
+  useEffect(() => {
+    console.log(cart);
+  }, [cart]);
+
+  const value = {
+    cart,
+    addProduct,
+    removeProduct,
+    removeItem,
+    clearCart,
+  };
+
+  return (
+    <CartContext.Provider value={value}>
+        {children}
+    </CartContext.Provider>);
 }
