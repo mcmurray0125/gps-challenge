@@ -5,8 +5,22 @@ body {
 .modal-content,
 #navbar,
 header,
-#products-main {
+#products-main,
+.cart-container {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+.quantity-toggle button {
+  width: 2rem;
+  height: 2rem;
+  font-size: 2.2rem;
+  border-radius: 20px;
+}
+.minus-btn span {
+  margin-bottom: 5.5px;
+}
+.plus-btn span {
+  margin-bottom: 3px;
 }
