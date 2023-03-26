@@ -10,21 +10,21 @@ export default function Home() {
     const minRef= useRef();
     const maxRef= useRef();
 
-function updateFilter(e) {
-    e.preventDefault()
-    const min = minRef.current.value
-    const max = maxRef.current.value
+    function updateFilter(e) {
+        e.preventDefault()
+        const min = minRef.current.value;
+        const max = maxRef.current.value;
 
-    if (!min || !max) {
-        setFilter(null)
-    } else if (Number(min) >= Number(max)) {
-        setMessage('Min price must be greater than max.')
-        setFilter(null);
-    } else {
-        setMessage('');
-        setFilter([min, max]);
-    }
-};
+        if (!min || !max) {
+            setFilter(null);
+        } else if (Number(min) >= Number(max)) {
+            setMessage('Min price must be greater than max.');
+            setFilter(null);
+        } else {
+            setMessage('');
+            setFilter([min, max]);
+        }
+    };
       
   return (
     <>

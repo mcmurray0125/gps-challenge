@@ -63,10 +63,6 @@ export function CartProvider({ children }) {
     localStorage.setItem('cart', JSON.stringify([]));
   }
 
-  useEffect(() => {
-    console.log(cart);
-  }, [cart]);
-
   const value = {
     cart,
     addProduct,

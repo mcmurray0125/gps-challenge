@@ -1,11 +1,12 @@
 import React, { useState } from "react"
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { useNavigate } from "react-router-dom";
+import { Container, Nav, Navbar, NavDropdown, Badge } from 'react-bootstrap';
 import logo from "../assets/logo-large.png"
+import { useCart } from '../contexts/CartContext';
 
 
 export default function Navigation() {
-  const navigate = useNavigate()
+  const { cart } = useCart();
+  const totalQuantity = cart.reduce((accumulator, product) => accumulator + product.quantity, 0);
 
 return (
     <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" className="w-100 top-0 py-3" sticky="top" id="navbar" style={{zIndex: "1000"}}>
@@ -28,7 +29,10 @@ return (
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="/cart" aria-label="cart"><i className="fa-solid fa-cart-shopping"></i></Nav.Link>
+            <Nav.Link href="/cart" className="position-relative" aria-label="cart">
+              {totalQuantity > 0 && <Badge bg="secondary" className="cart-badge">{totalQuantity}</Badge>}
+              <i className="fa-solid fa-cart-shopping"></i>Cart
+              </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
