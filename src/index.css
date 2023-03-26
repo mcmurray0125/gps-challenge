@@ -59,6 +59,21 @@ body {
   padding: 0;
   color: rgb(69, 69, 69);
 }
+.coupon-container {
+  display: flex;
+  flex-direction: column;
+}
+.coupon-wrapper {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.coupon-form {
+  display: flex;
+  gap: 4px;
+}
 
 @media screen and (max-width: 767px) {
   .cart-container {

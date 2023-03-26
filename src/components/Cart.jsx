@@ -1,13 +1,18 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Container, Table, Button, ListGroup, Form } from "react-bootstrap"
 import { useCart } from '../contexts/CartContext';
 
 export default function Cart() {
   const { cart, addProduct, removeProduct, clearCart, removeItem } = useCart();
+  const [coupon, setCoupon] = useState(null);
+  const [validCoupon, setValidCoupon] = useState(false)
+  const [message, setMessage] = useState('');
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   
   const totalQuantity = cart.reduce((accumulator, product) => accumulator + product.quantity, 0);
-  const subtotal = cart.reduce((accumulator, product) => accumulator + product.price * product.quantity, 0).toFixed(2);
+  const subtotal = cart.reduce((accumulator, product) => accumulator + product.price * product.quantity, 0);
+  const grandTotal = subtotal + coupon
+  const couponRef = useRef()
 
   //Get Window Width for small screen cart.
   useEffect(() => {
@@ -20,9 +25,13 @@ export default function Cart() {
     };
   }, []);
 
-  useEffect(() => {
-    console.log (windowWidth)
-  }, [windowWidth])
+  function checkCoupon(event) {
+    event.preventDefault();
+    couponRef.current.value.toUpperCase() === 'MM' 
+      ? (setCoupon(-5), setValidCoupon(true))
+      : (setMessage('Code not valid.'), setCoupon(0));
+  }
+  
   
   return (
     <Container className='rounded mt-4 py-3 cart-container border border-light bg-light'>
@@ -85,19 +94,34 @@ export default function Cart() {
           <ListGroup variant="flush">
             <ListGroup.Item className='cart-total-item'>
               <div className='cart-total-label'>Subtotal:</div>
-              <div>${subtotal}</div>
+              <div>${subtotal.toFixed(2)}</div>
             </ListGroup.Item>
             <ListGroup.Item className='cart-total-item'>
               <div className='cart-total-label'>Shipping:</div>
               <div>FREE</div>
             </ListGroup.Item>
-            <ListGroup.Item className='cart-total-item'>              
-              <div className='cart-total-label'>Coupon Code:</div>
-              <Form.Control placeholder="Coupon Code" style={{width: "140px"}}/>
+            <ListGroup.Item className='cart-total-item coupon-container'>
+              {!validCoupon ?
+              <>
+                <div className='coupon-wrapper'>
+                  <div className='cart-total-label'>Coupon Code:</div>
+                  <Form className='coupon-form'>
+                    <Form.Control placeholder="Coupon Code" type='text' aria-label='coupon-input' ref={couponRef} style={{width: "140px"}}/>
+                    <Button onClick={checkCoupon} type='submit' aria-label='submit coupon'>Submit</Button>
+                  </Form>
+                </div>
+                {coupon === 0 && <p className='m-0 mt-2 align-self-end text-danger'>Coupon not valid.</p>}
+              </>
+              : 
+              <div className='coupon-wrapper text-success'>
+                <div className='cart-total-label'>MM Applied &#x2713;</div>
+                <div>-$5.00</div>
+              </div>
+            }              
             </ListGroup.Item>
             <ListGroup.Item className='cart-total-item'>
               <div className='cart-total-label'>Grand Total:</div>
-              <div>$$$</div>
+              <div>${grandTotal.toFixed(2)}</div>
             </ListGroup.Item>
           </ListGroup>
           <Button className='w-100'>CHECKOUT</Button>
