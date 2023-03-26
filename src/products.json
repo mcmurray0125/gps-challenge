@@ -1,114 +1,130 @@
 [
     {
       "id": 1,
-      "name": "Rice Crispy Stick",
+      "name": "Rice Crispie Stick",
       "price": 5.75,
       "description": "A gourmet rice crispy on a stick. Garnished with sweets.",
-      "image": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=8080875515-8a3a8dc5735e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+      "image": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=8080875515-8a3a8dc5735e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+      "category": "Single Serving" 
     },
     {
       "id": 2,
-      "name": "Pizza Pie",
-      "price": 15.65,
-      "description": "Mouthwatering pizza made with premium meat toppings.",
-      "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+      "name": "Pancake Breakfast",
+      "price": 14.55,
+      "description": "Classic pancakes with fresh seasonal fruit toppings.",
+      "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+      "category": "Single Serving"
     },
     {
       "id": 3,
       "name": "Party Platter",
       "price": 20.65,
-      "description": "Complete cheese and cracker board - make hosting a breeze.",
-      "image": "https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1550&q=80"
+      "description": "This abundant board makes hosting your next gathering a breeze.",
+      "image": "https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1550&q=80",
+      "category": "To Share"
     },
     {
       "id": 4,
       "name": "Sushi Variety Pack",
       "price": 45.75,
       "description": "A variety of our finest sushi rolls delivered to you, ready to eat.",
-      "image": "https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80"
+      "image": "https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80",
+      "category": "To Share"
     },
     {
       "id": 1,
-      "name": "Crispie Stick",
+      "name": "Rice Crispie Stick",
       "price": 5.75,
-      "description": "Your traditional, home-style rice crispie - on a stick, dipped and garnished with sprinkles.",
-      "image": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+      "description": "A gourmet rice crispy on a stick. Garnished with sweets.",
+      "image": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+      "category": "Single Serving" 
     },
     {
       "id": 2,
-      "name": "Pizza Pie",
-      "price": 15.65,
-      "description": "Mouthwatering pizza made with premium meat toppings.",
-      "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+      "name": "Pancake Breakfast",
+      "price": 14.55,
+      "description": "Classic pancakes with fresh seasonal fruit toppings.",
+      "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+      "category": "Single Serving"
     },
     {
       "id": 3,
       "name": "Party Platter",
       "price": 20.65,
-      "description": "This completed cheese and cracker board makes hosting your next gathering a breeze.",
-      "image": "https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1550&q=80"
+      "description": "This abundant board makes hosting your next gathering a breeze.",
+      "image": "https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1550&q=80",
+      "category": "To Share"
     },
     {
       "id": 4,
       "name": "Sushi Variety Pack",
       "price": 45.75,
       "description": "A variety of our finest sushi rolls delivered to you ready to eat.",
-      "image": "https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80"
+      "image": "https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80",
+      "category": "To Share"
     },
     {
       "id": 1,
-      "name": "Crispie Stick",
+      "name": "Rice Crispie Stick",
       "price": 5.75,
-      "description": "Your traditional, home-style rice crispie - on a stick, dipped and garnished with sprinkles.",
-      "image": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+      "description": "A gourmet rice crispy on a stick. Garnished with sweets.",
+      "image": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+      "category": "Single Serving" 
     },
     {
       "id": 2,
-      "name": "Pizza Pie",
-      "price": 15.65,
-      "description": "Mouthwatering pizza made with premium meat toppings.",
-      "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+      "name": "Pancake Breakfast",
+      "price": 14.55,
+      "description": "Classic pancakes with fresh seasonal fruit toppings.",
+      "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+      "category": "Single Serving"
     },
     {
       "id": 3,
       "name": "Party Platter",
       "price": 20.65,
-      "description": "This completed cheese and cracker board makes hosting your next gathering a breeze.",
-      "image": "https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1550&q=80"
+      "description": "This abundant board makes hosting your next gathering a breeze.",
+      "image": "https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1550&q=80",
+      "category": "To Share"
     },
     {
       "id": 4,
       "name": "Sushi Variety Pack",
       "price": 45.75,
       "description": "A variety of our finest sushi rolls delivered to you ready to eat.",
-      "image": "https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80"
+      "image": "https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80",
+      "category": "To Share"
     },
     {
       "id": 1,
-      "name": "Crispie Stick",
+      "name": "Rice Crispie Stick",
       "price": 5.75,
-      "description": "Your traditional, home-style rice crispie - on a stick, dipped and garnished with sprinkles.",
-      "image": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+      "description": "A gourmet rice crispy on a stick. Garnished with sweets.",
+      "image": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+      "category": "Single Serving" 
     },
     {
       "id": 2,
-      "name": "Pizza Pie",
-      "price": 15.65,
-      "description": "Mouthwatering pizza made with premium meat toppings.",
-      "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+      "name": "Pancake Breakfast",
+      "price": 14.55,
+      "description": "Classic pancakes with fresh seasonal fruit toppings.",
+      "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+      "category": "Single Serving"
     },
     {
       "id": 3,
       "name": "Party Platter",
       "price": 20.65,
-      "description": "This completed cheese and cracker board makes hosting your next gathering a breeze.",
-      "image": "https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1550&q=80"
+      "description": "This abundant board makes hosting your next gathering a breeze.",
+      "image": "https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1550&q=80",
+      "category": "To Share"
     },
     {
       "id": 4,
       "name": "Sushi Variety Pack",
       "price": 45.75,
       "description": "A variety of our finest sushi rolls delivered to you ready to eat.",
-      "image": "https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80"
+      "image": "https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80",
+      "category": "To Share"
     }
 ]

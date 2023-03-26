@@ -59,6 +59,11 @@ body {
   font-family: "Lilita One";
   margin: 0;
 }
+/* Filters */
+.category-filter {
+  max-width: 400px;
+  margin-left: auto;
+}
 /* Quantity Toggler */
 .quantity-toggle button {
   width: 2rem;
@@ -97,7 +102,7 @@ body {
 .cart-item-image {
   width: 60px;
   height: 60px;
-  object-fit: "cover";
+  object-fit: cover;
 }
 .cart-total {
   max-width: 350px;
