@@ -4,6 +4,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
+
+/* Navbar */
 .navbar {
   font-family: "Lilita One";
 }
@@ -25,6 +27,7 @@ body {
   top: 6px !important;
   padding: 0px 0px !important;
 }
+/* Homepage Header */
 .home-header {
   height: 256px;
   width: 100%;
@@ -56,6 +59,7 @@ body {
   font-family: "Lilita One";
   margin: 0;
 }
+/* Quantity Toggler */
 .quantity-toggle button {
   width: 2rem;
   height: 2rem;
@@ -68,7 +72,7 @@ body {
 .plus-btn span {
   margin-bottom: 3px;
 }
-
+/* Cart Items */
 .cart-container {
   overflow-y: auto;
   overflow-x: hidden;
@@ -110,6 +114,24 @@ body {
   padding: 0;
   color: rgb(69, 69, 69);
 }
+/* Empty Cart */
+.empty-cart-wrapper,
+.no-products-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.empty-cart-wrapper a {
+  border: none;
+  background-color: darkgreen;
+  color: white;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+/* Coupon */
 .coupon-container {
   display: flex;
   flex-direction: column;
@@ -127,7 +149,6 @@ body {
 }
 
 /* Media Queries */
-
 @media screen and (max-width: 767px) {
   .cart-container {
     margin-left: auto !important;

@@ -35,8 +35,12 @@ export default function Cart() {
   
   return (
     <Container className='rounded mt-4 py-3 cart-container border border-light bg-light'>
-      {cart.length === 0 ? 
-      <div>no items</div> 
+      {cart.length === 0 ?
+      <section className='empty-cart-wrapper py-5'>
+        <h1 className='m-0'>Your cart is empty</h1>
+        <p className='m-0'>When you've added items to your cart, they will appear here.</p>
+        <a href='/'>SHOP OUR PRODUCTS</a>
+      </section>
       :
       <>
         <header className='cart-header text-center'>  

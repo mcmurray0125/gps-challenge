@@ -53,20 +53,33 @@ export default function Home() {
             </Form>
             {message && <p className='m-0 text-danger w-100 text-end'>{message}</p>}
             <Row className='products-grid py-3'>
-            {data.filter((product) => {
-                if (!filter) {
-                return true;
-                }
-                const [min, max] = filter;
-                return product.price >= min && product.price <= max;
-            })
-            .map((product, index) => {
-                return (
-                <Col xs={6} md={4} lg={3} key={index} className='mb-4'>
-                    <ProductCard product={product}/>
-                </Col>
-                );
-            })}
+                    {(() => {
+                    //Filter Products by Price
+                    const filteredData = data.filter((product) => {
+                        if (!filter) {
+                            return true;
+                        }
+                        const [min, max] = filter;
+                        return product.price >= min && product.price <= max;
+                    });
+                    //No Products Found in Price Filter Range
+                    if (filteredData.length === 0) {
+                        return (
+                            <div className='no-products-wrapper py-5'>
+                                <h1 className='m-0'>No Items Found</h1>
+                                <p className='m-0 text-center'>Try updating your price filter to find items within that range.</p>
+                            </div>
+                        );
+                    }
+                    //Display Filtered Products
+                    return filteredData.map((product, index) => {
+                        return (
+                            <Col xs={6} md={4} lg={3} key={index} className='mb-4'>
+                                <ProductCard product={product}/>
+                            </Col>
+                        );
+                    });
+                })()}
             </Row>
         </Container>
     </section>
