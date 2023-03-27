@@ -230,6 +230,21 @@ body {
   gap: 4px;
 }
 
+/* Pagination */
+.page-link {
+  color: white !important;
+  background-color: var(--middle-green) !important;
+  border-color: var(--border);
+}
+.page-link:hover {
+  background-color: var(--light-green) !important;
+}
+.page-item.active span {
+  background-color: var(--dark-green) !important;
+  border-color: var(--border);
+  color: white;
+}
+
 /* Media Queries */
 @media screen and (max-height: 400px) {
   .card-title,

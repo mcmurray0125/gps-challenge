@@ -9,19 +9,12 @@ export default function Home() {
     const [showAd, setShowAd] = useState(true);
     const [message, setMessage] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
-    const [totalPages, setTotalPages] = useState(Math.ceil(data.length / 16));
+    const [totalPages, setTotalPages] = useState(2);
     const minRef = useRef();
     const maxRef = useRef();
     const categoryRef = useRef();
 
-    const paginate = (number) => setCurrentPage(number);
-
-
-    useEffect(() => {
-        console.log(currentPage)
-    }, [paginate])
-
-    function updateFilter(e) {
+    function handlePriceFilterChange(e) {
         e.preventDefault()
         const min = minRef.current.value;
         const max = maxRef.current.value;
@@ -50,11 +43,51 @@ export default function Home() {
         }
     }
 
+    function filteredData() {
+    const [min, max] = priceFilter || [];
+    const filteredData = data.filter((product) => {
+    if (!priceFilter) {
+        if (!categoryFilter) {
+            return true;
+        } else {
+            return product.category === categoryFilter;
+        }
+    } else {
+        if (!categoryFilter) {
+            return product.price >= min && product.price <= max;
+        } else {
+            return product.price >= min && product.price <= max && product.category === categoryFilter;
+        }
+    }
+    });
+    return filteredData;
+    }
+
+    
+    useEffect(() => {
+        const totalPages = Math.ceil(filteredData().length / 16);
+        setTotalPages(totalPages);
+    }, [filteredData]);
+    
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [totalPages]);
+    
+    const scrollToTop = () => {
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+      }, 200);
+      };
+
     //Pagination
+    const start = (currentPage - 1) * 16;
+    const end = start + 16;
     let items = [];
+    const paginate = (number) => setCurrentPage(number);
+
     for (let number = 1; number <= totalPages; number++) {
       items.push(
-        <Pagination.Item key={number} active={currentPage === number} onClick={() => paginate(number)}>
+        <Pagination.Item key={number} active={currentPage === number} onClick={() => {paginate(number); scrollToTop()}}>
           {number}
         </Pagination.Item>
       );
@@ -83,7 +116,7 @@ export default function Home() {
                         <Form.Control type="number" placeholder="Max." aria-label='Maximum price' ref={maxRef}/>
                     </div>
                 </Form.Group>
-                <Button type="submit" onClick={updateFilter}>Update</Button>
+                <Button type="submit" onClick={handlePriceFilterChange}>Update</Button>
             </Form>
             {message && <p className='m-0 mt-1 text-danger w-100 text-end'>{message}</p>}
             <Form className='category-filter mt-2'>
@@ -100,49 +133,25 @@ export default function Home() {
     </section>
     <section id='products-main'>
         <Container className='products-container rounded py-3'>
+        {filteredData().length === 0 ? (
+            <div className='no-products-wrapper py-5'>
+                <h1 className='m-0'>No Items Found</h1>
+                <p className='m-0 text-center'>Try updating your price filter to find items within that range.</p>
+            </div>
+        ) : (
+        <>
             <Row className='products-grid'>
-                    {(() => {
-                    //Filter Products by Price & Category
-                    const start = (currentPage - 1) * 16;
-                    const end = start + 16;
-                    const filteredData = data.filter((product) => {
-                        if (!priceFilter) {
-                          if (!categoryFilter) {
-                            return true;
-                          } else {
-                            return product.category === categoryFilter;
-                          }
-                        } else {
-                          const [min, max] = priceFilter;
-                          if (!categoryFilter) {
-                            return product.price >= min && product.price <= max;
-                          } else {
-                            return product.price >= min && product.price <= max && product.category === categoryFilter;
-                          }
-                        }
-                      });
-
-                    const pageCount = Math.ceil(filteredData.length / 16);
-                    //No Products Found in Price Filter Range
-                    if (filteredData.length === 0) {
-                        return (
-                            <div className='no-products-wrapper py-5'>
-                                <h1 className='m-0'>No Items Found</h1>
-                                <p className='m-0 text-center'>Try updating your price filter to find items within that range.</p>
-                            </div>
-                        );
-                    }
-                    //Display Filtered Products
-                    return filteredData.slice(start, end).map((product, index) => {
-                        return (
-                            <Col xs={12} sm={6} md={4} lg={3} key={index} className='mb-4'>
-                                <ProductCard product={product}/>
-                            </Col>
-                        );
-                    });
-                })()}
+                {filteredData().slice(start, end).map((product, index) => (
+                <Col xs={12} sm={6} md={4} lg={3} key={index} className='mb-4'>
+                    <ProductCard product={product} />
+                </Col>
+                ))}
             </Row>
-            <Pagination className='w-100 d-flex justify-content-center'>{items}</Pagination>
+            <Pagination className='w-100 d-flex justify-content-center'>
+                {items}
+            </Pagination>
+        </>
+        )}
         </Container>
     </section>
     </>
