@@ -25,7 +25,7 @@ export default function Home() {
                 setPriceFilter(null);
             }
         } else if (Number(min) >= Number(max)) {
-            setMessage('Min price must be greater than max.');
+            setMessage('Min price must be less than max.');
             setPriceFilter(null);
         } else {
             setMessage('');
