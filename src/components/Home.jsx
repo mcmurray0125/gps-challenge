@@ -19,6 +19,11 @@ export default function Home() {
 
         if (!min || !max) {
             setPriceFilter(null);
+            setMessage('')
+            if (!min && max || min && !max) {
+                setMessage('Please enter both values or no values.');
+                setPriceFilter(null);
+            }
         } else if (Number(min) >= Number(max)) {
             setMessage('Min price must be greater than max.');
             setPriceFilter(null);
@@ -47,8 +52,8 @@ export default function Home() {
                 Use code <strong>"MM"</strong> for $5 off your order!
             </Alert>}
     </header>
-    <section id='products-main'>
-        <Container className='py-3'>
+    <section className='filters'>
+        <Container className='filters-container py-3'>
             <Form className='d-flex justify-content-end gap-2'>
                 <Form.Group className='d-flex justify-content-end gap-2 align-items-center' controlId="formPriceRange">
                     <Form.Label className='m-0' style={{whiteSpace: "nowrap"}}>Filter Price</Form.Label>
@@ -61,6 +66,7 @@ export default function Home() {
                 </Form.Group>
                 <Button type="submit" onClick={updateFilter}>Update</Button>
             </Form>
+            {message && <p className='m-0 mt-1 text-danger w-100 text-end'>{message}</p>}
             <Form className='category-filter mt-2'>
                 <Form.Group className='d-flex justify-content-end gap-2 align-items-center'> 
                     <Form.Label className='m-0' style={{whiteSpace: "nowrap"}}>Category</Form.Label>   
@@ -71,8 +77,11 @@ export default function Home() {
                     </Form.Select>
                 </Form.Group>
             </Form>
-            {message && <p className='m-0 text-danger w-100 text-end'>{message}</p>}
-            <Row className='products-grid py-3'>
+        </Container>
+    </section>
+    <section id='products-main'>
+        <Container className='products-container rounded py-3'>
+            <Row className='products-grid'>
                     {(() => {
                     //Filter Products by Price & Category
                     const filteredData = data.filter((product) => {
@@ -103,7 +112,7 @@ export default function Home() {
                     //Display Filtered Products
                     return filteredData.map((product, index) => {
                         return (
-                            <Col xs={6} md={4} lg={3} key={index} className='mb-4'>
+                            <Col xs={12} sm={6} md={4} lg={3} key={index} className='mb-4'>
                                 <ProductCard product={product}/>
                             </Col>
                         );

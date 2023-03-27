@@ -9,7 +9,7 @@ export default function Navigation() {
   const totalQuantity = cart.reduce((accumulator, product) => accumulator + product.quantity, 0);
 
 return (
-    <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" className="w-100 top-0 py-3" sticky="top" id="navbar" style={{zIndex: "1000"}}>
+    <Navbar collapseOnSelect expand="md" bg="transparent" className="py-3" sticky="top" id="navbar" style={{zIndex: "1000"}}>
       <Container>
         <Navbar.Brand href="/">
             <img
@@ -23,14 +23,12 @@ return (
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Our Products</Nav.Link>
-            <NavDropdown title="Categories" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/action">Category 1</NavDropdown.Item>
-              <NavDropdown.Item href="/comedy">Category 2</NavDropdown.Item>
-            </NavDropdown>
           </Nav>
           <Nav>
             <Nav.Link href="/cart" className="position-relative" aria-label="cart">
-              {totalQuantity > 0 && <Badge bg="secondary" className="cart-badge">{totalQuantity}</Badge>}
+              {totalQuantity > 0 && 
+                <Badge className="cart-badge bg-success" >{totalQuantity}</Badge>
+              }
               <i className="fa-solid fa-cart-shopping"></i>Cart
               </Nav.Link>
           </Nav>

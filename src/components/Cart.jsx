@@ -34,11 +34,13 @@ export default function Cart() {
   
   
   return (
-    <Container className='rounded mt-4 py-3 cart-container border border-light bg-light'>
+    <div className='cart-wrapper'>
+    <Container className='rounded mt-4 py-3 cart-container'>
+      {/* Empty Cart */}
       {cart.length === 0 ?
       <section className='empty-cart-wrapper py-5'>
         <h1 className='m-0'>Your cart is empty</h1>
-        <p className='m-0'>When you've added items to your cart, they will appear here.</p>
+        <p className='m-0 text-center'>When you've added items to your cart, they will appear here.</p>
         <a href='/'>SHOP OUR PRODUCTS</a>
       </section>
       :
@@ -71,8 +73,8 @@ export default function Cart() {
                       </div>
                     </div>
                   </td>
-                  <td className='py-4'>{windowWidth < 767 && `Price: `}${item.price}</td>
-                  <td className='py-4'>
+                  <td className='py-4 cart-item-price'>{windowWidth < 767 && `Price: `}${item.price}</td>
+                  <td className='cart-item-toggler py-4'>
                     <div className="quantity-toggle d-flex align-items-center gap-2">
                         <Button variant='success' className='d-flex align-items-center justify-content-center minus-btn' onClick={() => removeProduct(item)}>
                             <span>-</span>
@@ -133,5 +135,6 @@ export default function Cart() {
       </>
       }
     </Container>
+    </div>
   )
   }

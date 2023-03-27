@@ -12,9 +12,9 @@ export default function ProductCard({ product }) {
     
     return (
         <>
-        <Card className="p-2 border-0 shadow h-100">
-            <Card.Body className='p-0 d-flex flex-column justify-content-between'>
-                <Card.Img src={product.image} className="shadow mb-3" alt='product image' aria-label={`display info for ${product.name}`} style={{objectFit: "cover", height: "260px"}} />
+        <Card className="product-card-wrapper p-2 border-0 h-100">
+            <Card.Body className='product-card-body p-0'>
+                <Card.Img src={product.image} className="product-card-image shadow mb-3" alt='product image'/>
                 <div className='product-text'>
                     <Card.Title className='m-0'>{product.name}</Card.Title>
                     <Card.Text className='my-0'>${product.price}</Card.Text>
@@ -24,7 +24,7 @@ export default function ProductCard({ product }) {
             <Card.Footer className='bg-transparent p-0 pt-2'>
                 <div className='product-buttons d-flex flex-wrap justify-content-between gap-3 py-2'>
                     {!productInCart ?
-                    <Button variant='success' className='p-1' onClick={() => addProduct(product)}>
+                    <Button className='add-to-cart-button p-1' onClick={() => addProduct(product)} variant='outline-success'>
                         Add to Cart
                     </Button> :
                     <div className="quantity-toggle d-flex align-items-center justify-content-center gap-2">
@@ -37,7 +37,7 @@ export default function ProductCard({ product }) {
                         </Button>
                     </div>
                     }
-                    <Button variant='outline-success' className='p-1' onClick={() => setModalShow(true)}>
+                    <Button variant='outline-success' className='p-1' onClick={() => setModalShow(true)} aria-label={`display info for ${product.name}`}>
                         Details
                     </Button>
                 </div>
