@@ -6,7 +6,6 @@ export default function Cart() {
   const { cart, addProduct, removeProduct, clearCart, removeItem } = useCart();
   const [coupon, setCoupon] = useState(null);
   const [validCoupon, setValidCoupon] = useState(false)
-  const [message, setMessage] = useState('');
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   
   const totalQuantity = cart.reduce((accumulator, product) => accumulator + product.quantity, 0);
@@ -29,7 +28,7 @@ export default function Cart() {
     event.preventDefault();
     couponRef.current.value.toUpperCase() === 'MM' 
       ? (setCoupon(-5), setValidCoupon(true))
-      : (setMessage('Code not valid.'), setCoupon(0));
+      : setCoupon(0);
   }
   
   

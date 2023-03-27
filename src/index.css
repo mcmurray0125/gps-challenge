@@ -270,8 +270,8 @@ body {
     gap: 0.5rem !important;
   }
   .product-card-image {
-    height: 180px !important;
-    width: 180px !important;
+    height: 80px !important;
+    width: 80px !important;
     object-fit: cover;
   }
   .modal-dialog {

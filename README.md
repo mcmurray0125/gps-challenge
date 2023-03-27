@@ -6,7 +6,7 @@ Welcome to QuickFood! Use coupon code <strong>"MM"</strong> for $5 off your orde
 
 <strong>View the live website here:</strong> [https://gps-challenge-mm.netlify.app/](https://gps-challenge-mm.netlify.app/)
 
-I duplicated items to populate the website faster without needing to create 32 unique products.
+I duplicated items to populate the website without needing to create 32 unique products.
 
 ## Steps to Run Project locally
 

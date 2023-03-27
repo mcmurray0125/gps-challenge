@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import { Container, Nav, Navbar, NavDropdown, Badge } from 'react-bootstrap';
+import React from "react"
+import { Container, Nav, Navbar, Badge } from 'react-bootstrap';
 import logo from "../assets/logo-large.png"
 import { useCart } from '../contexts/CartContext';
 

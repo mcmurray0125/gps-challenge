@@ -10,6 +10,8 @@ export default function Home() {
     const [message, setMessage] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(2);
+    const startIndex = (currentPage - 1) * 16;
+    const endIndex = startIndex + 16;
     const minRef = useRef();
     const maxRef = useRef();
     const categoryRef = useRef();
@@ -80,8 +82,6 @@ export default function Home() {
       };
 
     //Pagination
-    const start = (currentPage - 1) * 16;
-    const end = start + 16;
     let items = [];
     const paginate = (number) => setCurrentPage(number);
 
@@ -141,7 +141,7 @@ export default function Home() {
         ) : (
         <>
             <Row className='products-grid'>
-                {filteredData().slice(start, end).map((product, index) => (
+                {filteredData().slice(startIndex, endIndex).map((product, index) => (
                 <Col xs={12} sm={6} md={4} lg={3} key={index} className='mb-4'>
                     <ProductCard product={product} />
                 </Col>
