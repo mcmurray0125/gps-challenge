@@ -73,7 +73,7 @@ export default function Cart() {
                       </div>
                     </div>
                   </td>
-                  <td className='py-4 cart-item-price'>{windowWidth < 767 && `Price: `}${item.price}</td>
+                  <td className='py-4 cart-item-price'>{windowWidth < 767 && `Price: `}${item.price.toFixed(2)}</td>
                   <td className='cart-item-toggler py-4'>
                     <div className="quantity-toggle d-flex align-items-center gap-2">
                         <Button variant='success' className='d-flex align-items-center justify-content-center minus-btn' onClick={() => removeProduct(item)}>

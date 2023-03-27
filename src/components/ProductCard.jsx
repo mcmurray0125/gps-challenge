@@ -17,7 +17,7 @@ export default function ProductCard({ product }) {
                 <Card.Img src={product.image} className="product-card-image shadow mb-3" alt='product image'/>
                 <div className='product-text'>
                     <Card.Title className='m-0'>{product.name}</Card.Title>
-                    <Card.Text className='my-0'>${product.price}</Card.Text>
+                    <Card.Text className='my-0'>${product.price.toFixed(2)}</Card.Text>
                     <Card.Text className='py-2'>{product.description}</Card.Text>
                 </div>
             </Card.Body>

@@ -1,5 +1,5 @@
 import { React, useEffect, useRef, useState} from 'react'
-import { Container, Row, Col, Form, Button, Alert} from "react-bootstrap"
+import { Container, Row, Col, Form, Button, Alert, Pagination} from "react-bootstrap"
 import data from "../products.json"
 import ProductCard from './ProductCard'
 
@@ -8,9 +8,18 @@ export default function Home() {
     const [categoryFilter, setCategoryFilter] = useState(null)
     const [showAd, setShowAd] = useState(true);
     const [message, setMessage] = useState('');
+    const [currentPage, setCurrentPage] = useState(1);
+    const [totalPages, setTotalPages] = useState(Math.ceil(data.length / 16));
     const minRef = useRef();
     const maxRef = useRef();
     const categoryRef = useRef();
+
+    const paginate = (number) => setCurrentPage(number);
+
+
+    useEffect(() => {
+        console.log(currentPage)
+    }, [paginate])
 
     function updateFilter(e) {
         e.preventDefault()
@@ -39,6 +48,16 @@ export default function Home() {
         } else {
             setCategoryFilter(categoryRef.current.value)
         }
+    }
+
+    //Pagination
+    let items = [];
+    for (let number = 1; number <= totalPages; number++) {
+      items.push(
+        <Pagination.Item key={number} active={currentPage === number} onClick={() => paginate(number)}>
+          {number}
+        </Pagination.Item>
+      );
     }
       
   return (
@@ -84,6 +103,8 @@ export default function Home() {
             <Row className='products-grid'>
                     {(() => {
                     //Filter Products by Price & Category
+                    const start = (currentPage - 1) * 16;
+                    const end = start + 16;
                     const filteredData = data.filter((product) => {
                         if (!priceFilter) {
                           if (!categoryFilter) {
@@ -100,6 +121,8 @@ export default function Home() {
                           }
                         }
                       });
+
+                    const pageCount = Math.ceil(filteredData.length / 16);
                     //No Products Found in Price Filter Range
                     if (filteredData.length === 0) {
                         return (
@@ -110,7 +133,7 @@ export default function Home() {
                         );
                     }
                     //Display Filtered Products
-                    return filteredData.map((product, index) => {
+                    return filteredData.slice(start, end).map((product, index) => {
                         return (
                             <Col xs={12} sm={6} md={4} lg={3} key={index} className='mb-4'>
                                 <ProductCard product={product}/>
@@ -119,6 +142,7 @@ export default function Home() {
                     });
                 })()}
             </Row>
+            <Pagination className='w-100 d-flex justify-content-center'>{items}</Pagination>
         </Container>
     </section>
     </>

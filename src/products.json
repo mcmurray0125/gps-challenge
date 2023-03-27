@@ -2,7 +2,7 @@
     {
       "id": 1,
       "name": "Rice Crispie Stick",
-      "price": 5.75,
+      "price": 5.50,
       "description": "A gourmet rice crispy on a stick. Garnished with sweets.",
       "image": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=8080875515-8a3a8dc5735e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
       "category": "Single Serving" 
@@ -10,7 +10,7 @@
     {
       "id": 2,
       "name": "Pancake Breakfast",
-      "price": 14.55,
+      "price": 14.00,
       "description": "Classic pancakes with fresh seasonal fruit toppings.",
       "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
       "category": "Single Serving"
@@ -18,7 +18,7 @@
     {
       "id": 3,
       "name": "Party Platter",
-      "price": 20.65,
+      "price": 23.50,
       "description": "This abundant board makes hosting your next gathering a breeze.",
       "image": "https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1550&q=80",
       "category": "To Share"
@@ -26,7 +26,7 @@
     {
       "id": 4,
       "name": "Sushi Variety Pack",
-      "price": 45.75,
+      "price": 45.00,
       "description": "A variety of our finest sushi rolls delivered to you, ready to eat.",
       "image": "https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80",
       "category": "To Share"
@@ -34,7 +34,7 @@
     {
       "id": 1,
       "name": "Rice Crispie Stick",
-      "price": 5.75,
+      "price": 5.50,
       "description": "A gourmet rice crispy on a stick. Garnished with sweets.",
       "image": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
       "category": "Single Serving" 
@@ -42,7 +42,7 @@
     {
       "id": 2,
       "name": "Pancake Breakfast",
-      "price": 14.55,
+      "price": 14.00,
       "description": "Classic pancakes with fresh seasonal fruit toppings.",
       "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
       "category": "Single Serving"
@@ -50,7 +50,7 @@
     {
       "id": 3,
       "name": "Party Platter",
-      "price": 20.65,
+      "price": 23.50,
       "description": "This abundant board makes hosting your next gathering a breeze.",
       "image": "https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1550&q=80",
       "category": "To Share"
@@ -58,7 +58,7 @@
     {
       "id": 4,
       "name": "Sushi Variety Pack",
-      "price": 45.75,
+      "price": 45.00,
       "description": "A variety of our finest sushi rolls delivered to you ready to eat.",
       "image": "https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80",
       "category": "To Share"
@@ -66,7 +66,7 @@
     {
       "id": 1,
       "name": "Rice Crispie Stick",
-      "price": 5.75,
+      "price": 5.50,
       "description": "A gourmet rice crispy on a stick. Garnished with sweets.",
       "image": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
       "category": "Single Serving" 
@@ -74,7 +74,7 @@
     {
       "id": 2,
       "name": "Pancake Breakfast",
-      "price": 14.55,
+      "price": 14.00,
       "description": "Classic pancakes with fresh seasonal fruit toppings.",
       "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
       "category": "Single Serving"
@@ -82,7 +82,7 @@
     {
       "id": 3,
       "name": "Party Platter",
-      "price": 20.65,
+      "price": 23.50,
       "description": "This abundant board makes hosting your next gathering a breeze.",
       "image": "https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1550&q=80",
       "category": "To Share"
@@ -90,7 +90,7 @@
     {
       "id": 4,
       "name": "Sushi Variety Pack",
-      "price": 45.75,
+      "price": 45.00,
       "description": "A variety of our finest sushi rolls delivered to you ready to eat.",
       "image": "https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80",
       "category": "To Share"
@@ -98,7 +98,7 @@
     {
       "id": 1,
       "name": "Rice Crispie Stick",
-      "price": 5.75,
+      "price": 5.50,
       "description": "A gourmet rice crispy on a stick. Garnished with sweets.",
       "image": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
       "category": "Single Serving" 
@@ -106,7 +106,7 @@
     {
       "id": 2,
       "name": "Pancake Breakfast",
-      "price": 14.55,
+      "price": 14.00,
       "description": "Classic pancakes with fresh seasonal fruit toppings.",
       "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
       "category": "Single Serving"
@@ -114,7 +114,7 @@
     {
       "id": 3,
       "name": "Party Platter",
-      "price": 20.65,
+      "price": 23.50,
       "description": "This abundant board makes hosting your next gathering a breeze.",
       "image": "https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1550&q=80",
       "category": "To Share"
@@ -122,9 +122,137 @@
     {
       "id": 4,
       "name": "Sushi Variety Pack",
-      "price": 45.75,
+      "price": 45.00,
       "description": "A variety of our finest sushi rolls delivered to you ready to eat.",
       "image": "https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80",
+      "category": "To Share"
+    },
+    {
+      "id": 11,
+      "name": "Iced Coffee",
+      "price": 6.00,
+      "description": "Smooth and rich espresso mixed with sweet vanilla and cold milk.",
+      "image": "./coffee.jpg",
+      "category": "Single Serving" 
+    },
+    {
+      "id": 12,
+      "name": "Tasty Tacos",
+      "price": 28.00,
+      "description": "An assortment of tacos filled with tender meats, veggies, and salsa.",
+      "image": "https://popmenucloud.com/cdn-cgi/image/width%3D1200%2Cheight%3D1200%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/cfdtopiy/af0f5aa9-fcfb-4b5c-afd9-5c6b21ee9110.jpg",
+      "category": "To Share"
+    },
+    {
+      "id": 13,
+      "name": "Big Burger",
+      "price": 19.00,
+      "description": "Juicy beef patty topped with melted cheese, bacon, and lettuce on a soft bun.",
+      "image": "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2315&q=80",
+      "category": "Single Serving"
+    },
+    {
+      "id": 14,
+      "name": "Confetti Cake",
+      "price": 30.00,
+      "description": "Decadent chocolate cake layered with frosting and sprinkles.",
+      "image": "https://handletheheat.com/wp-content/uploads/2015/03/Best-Birthday-Cake-with-milk-chocolate-buttercream-SQUARE.jpg",
+      "category": "To Share"
+    },
+    {
+      "id": 11,
+      "name": "Iced Coffee",
+      "price": 6.00,
+      "description": "Smooth and rich espresso mixed with sweet vanilla and cold milk.",
+      "image": "./coffee.jpg",
+      "category": "Single Serving" 
+    },
+    {
+      "id": 12,
+      "name": "Tasty Tacos",
+      "price": 28.00,
+      "description": "An assortment of tacos filled with tender meats, veggies, and salsa.",
+      "image": "https://popmenucloud.com/cdn-cgi/image/width%3D1200%2Cheight%3D1200%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/cfdtopiy/af0f5aa9-fcfb-4b5c-afd9-5c6b21ee9110.jpg",
+      "category": "To Share"
+    },
+    {
+      "id": 13,
+      "name": "Big Burger",
+      "price": 19.00,
+      "description": "Juicy beef patty topped with melted cheese, bacon, and lettuce on a soft bun.",
+      "image": "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2315&q=80",
+      "category": "Single Serving"
+    },
+    {
+      "id": 14,
+      "name": "Confetti Cake",
+      "price": 30.00,
+      "description": "Decadent chocolate cake layered with frosting and sprinkles.",
+      "image": "https://handletheheat.com/wp-content/uploads/2015/03/Best-Birthday-Cake-with-milk-chocolate-buttercream-SQUARE.jpg",
+      "category": "To Share"
+    },
+    {
+      "id": 11,
+      "name": "Iced Coffee",
+      "price": 6.00,
+      "description": "Smooth and rich espresso mixed with sweet vanilla and cold milk.",
+      "image": "./coffee.jpg",
+      "category": "Single Serving" 
+    },
+    {
+      "id": 12,
+      "name": "Tasty Tacos",
+      "price": 28.00,
+      "description": "An assortment of tacos filled with tender meats, veggies, and salsa.",
+      "image": "https://popmenucloud.com/cdn-cgi/image/width%3D1200%2Cheight%3D1200%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/cfdtopiy/af0f5aa9-fcfb-4b5c-afd9-5c6b21ee9110.jpg",
+      "category": "To Share"
+    },
+    {
+      "id": 13,
+      "name": "Big Burger",
+      "price": 19.00,
+      "description": "Juicy beef patty topped with melted cheese, bacon, and lettuce on a soft bun.",
+      "image": "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2315&q=80",
+      "category": "Single Serving"
+    },
+    {
+      "id": 14,
+      "name": "Confetti Cake",
+      "price": 30.00,
+      "description": "Decadent chocolate cake layered with frosting and sprinkles.",
+      "image": "https://handletheheat.com/wp-content/uploads/2015/03/Best-Birthday-Cake-with-milk-chocolate-buttercream-SQUARE.jpg",
+      "category": "To Share"
+    },
+    {
+      "id": 11,
+      "name": "Iced Coffee",
+      "price": 6.00,
+      "description": "Smooth and rich espresso mixed with sweet vanilla and cold milk.",
+      "image": "./coffee.jpg",
+      "category": "Single Serving" 
+    },
+    {
+      "id": 12,
+      "name": "Tasty Tacos",
+      "price": 28.00,
+      "description": "An assortment of tacos filled with tender meats, veggies, and salsa.",
+      "image": "https://popmenucloud.com/cdn-cgi/image/width%3D1200%2Cheight%3D1200%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/cfdtopiy/af0f5aa9-fcfb-4b5c-afd9-5c6b21ee9110.jpg",
+      "category": "To Share"
+    },
+    {
+      "id": 13,
+      "name": "Big Burger",
+      "price": 19.00,
+      "description": "Juicy beef patty topped with melted cheese, bacon, and lettuce on a soft bun.",
+      "image": "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2315&q=80",
+      "category": "Single Serving"
+    },
+    {
+      "id": 14,
+      "name": "Confetti Cake",
+      "price": 30.00,
+      "description": "Decadent chocolate cake layered with frosting and sprinkles.",
+      "image": "https://handletheheat.com/wp-content/uploads/2015/03/Best-Birthday-Cake-with-milk-chocolate-buttercream-SQUARE.jpg",
       "category": "To Share"
     }
 ]
