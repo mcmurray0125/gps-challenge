@@ -23,16 +23,20 @@ export default function ProductCard({ product }) {
             </Card.Body>
             <Card.Footer className='bg-transparent p-0 pt-2'>
                 <div className='product-buttons d-flex flex-wrap justify-content-between gap-3 py-2'>
-                    {!productInCart ?
+                    {!productInCart
+                    ?
                     <Button className='add-to-cart-button p-1' onClick={() => addProduct(product)} variant='outline-success'>
                         Add to Cart
-                    </Button> :
+                    </Button>
+                    :
                     <div className="quantity-toggle d-flex align-items-center justify-content-center gap-2">
-                        <Button variant='success' className='d-flex align-items-center justify-content-center minus-btn' onClick={() => removeProduct(product)}>
+                        <Button className='d-flex align-items-center justify-content-center minus-btn' aria-label={`decrease quantity for ${product.name}`} onClick={() => removeProduct(product)}>
                             <span>-</span>
                         </Button>
-                        <p className='m-0 fs-5'>{cart[productIndex].quantity}</p>
-                        <Button variant='success' className='d-flex align-items-center justify-content-center plus-btn' onClick={() => addProduct(product)}>
+                        <p className='m-0 fs-5' aria-label={`amount of ${product.name} in cart`}>
+                            {cart[productIndex].quantity}
+                        </p>
+                        <Button className='d-flex align-items-center justify-content-center plus-btn' aria-label={`increase quantity for ${product.name}`} onClick={() => addProduct(product)}>
                             <span>+</span>
                         </Button>
                     </div>

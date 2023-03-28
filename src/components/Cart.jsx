@@ -75,18 +75,18 @@ export default function Cart() {
                   <td className='py-4 cart-item-price'>{windowWidth < 767 && `Price: `}${item.price.toFixed(2)}</td>
                   <td className='cart-item-toggler py-4'>
                     <div className="quantity-toggle d-flex align-items-center gap-2">
-                        <Button variant='success' className='d-flex align-items-center justify-content-center minus-btn' onClick={() => removeProduct(item)}>
+                        <Button variant='success' className='d-flex align-items-center justify-content-center minus-btn' aria-label={`decrease quantity for ${item.name}`} onClick={() => removeProduct(item)}>
                             <span>-</span>
                         </Button>
-                        <p className='m-0 fs-5'>{item.quantity}</p>
-                        <Button variant='success' className='d-flex align-items-center justify-content-center plus-btn' onClick={() => addProduct(item)}>
+                        <p className='m-0 fs-5' aria-label={`${item.quantity} ${item.name} in cart`}>{item.quantity}</p>
+                        <Button variant='success' className='d-flex align-items-center justify-content-center plus-btn' aria-label={`increase quantity for ${item.name}`} onClick={() => addProduct(item)}>
                             <span>+</span>
                         </Button>
                     </div>  
                   </td>
                   <td className='cart-item-total py-4'>{windowWidth < 767 && `Total: `}${(item.price * item.quantity).toFixed(2)}</td>
                   <td className='cart-item-remove py-4'>
-                    <button className='remove-item-button' onClick={() => removeItem(item)}>Remove</button>
+                    <button className='remove-item-button' onClick={() => removeItem(item)} aria-label={`Remove ${item.name} from cart`} >Remove</button>
                   </td>
                 </tr>
                 );
