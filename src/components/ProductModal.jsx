@@ -10,7 +10,7 @@ export default function ProductModal({ show, product, onHide }) {
     centered
     >
       <div className="modal-image w-100 d-flex justify-content-center">
-        <Image src={product.image} style={{maxWidth: "300px"}} className="shadow"/>
+        <Image src={product.image} style={{maxWidth: "300px"}} className="shadow" alt={`${product.name} image`}/>
       </div>
       <section className="modal-info">
         <Modal.Header className='border-0 flex-grow-1 d-flex flex-column'>

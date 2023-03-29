@@ -14,7 +14,7 @@ export default function ProductCard({ product }) {
         <>
         <Card className="product-card-wrapper p-2 border-0 h-100">
             <Card.Body className='product-card-body p-0'>
-                <Card.Img src={product.image} className="product-card-image shadow mb-3" alt='product image'/>
+                <Card.Img src={product.image} className="product-card-image shadow mb-3" alt={`${product.name} image`}/>
                 <div className='product-text'>
                     <Card.Title className='m-0'>{product.name}</Card.Title>
                     <Card.Text className='my-0'>${product.price.toFixed(2)}</Card.Text>

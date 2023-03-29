@@ -65,7 +65,7 @@ export default function Cart() {
                 <tr key={index} className="cart-item">
                   <td className='cart-item-description py-4 w-50'>
                     <div className='description-main d-flex gap-4'>
-                      <img src={item.image} className="cart-item-image"/>
+                      <img src={item.image} className="cart-item-image" alt={`${item.name} image`}/>
                       <div className='cart-item-text'>
                         <h5 className='m-0'>{item.name}</h5>
                         <p className='m-0'>{item.description}</p>
